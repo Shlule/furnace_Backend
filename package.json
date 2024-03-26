@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "dev": "nodemon src/httpServer/server/server.ts",
+    "start": "node dist/httpServer/server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +22,14 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.19",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.7.4",
     "ts-node": "^10.9.2"
   }
 }
